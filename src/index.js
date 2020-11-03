@@ -1,19 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import { TodoListStore } from './stores/todo.store';
-import { StoreProvider } from './helpers/create-context'
-let myStore = new TodoListStore();
 
-window.store = myStore;
+import * as serviceWorker from './serviceWorker';
+
+//mobx provider
+import { TimerStoreProvider, TodoStoreProvider } from './stores/index.store';
+
+// pages
+import App from './App';
+
+import './index.css';
+
 ReactDOM.render(
-  // <React.StrictMode>
-  <StoreProvider value={myStore}>
-    <App />
-  </StoreProvider >
-  // </React.StrictMode>,
+  <React.StrictMode>
+    <TimerStoreProvider>
+      <TodoStoreProvider>
+        <App />
+      </TodoStoreProvider>
+    </TimerStoreProvider>
+  </React.StrictMode>
   ,
   document.getElementById('root')
 );
