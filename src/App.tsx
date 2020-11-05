@@ -6,7 +6,6 @@ import { observer, } from 'mobx-react-lite';
 import { Timer } from './stores/Timer'
 
 const App = observer(() => {
-  // const td = useStore()
 
   return (
     <div className="App">
@@ -19,7 +18,6 @@ const App = observer(() => {
 export default App;
 
 
-// import {observer} from 'mobx-react-lite'
 
 const TimerContext = createContext(new Timer())
 
