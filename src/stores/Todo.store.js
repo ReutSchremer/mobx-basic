@@ -26,7 +26,8 @@ export class TodoListStore {
     }
 
     get getTodoList() { //filtered by search
-        if(!this.searchText || !this.searchText.length) return this.list
+        console.log("computed runs again")
+        if (!this.searchText || !this.searchText.length) return this.list
         let regexFilter = new RegExp("^" + this.searchText, "i");
         return this.list.filter(todo => regexFilter.test(todo))
     }

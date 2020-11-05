@@ -13,11 +13,11 @@ import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <TimerStoreProvider>
-      <TodoStoreProvider>
-        <App />
-      </TodoStoreProvider>
-    </TimerStoreProvider>
+    {/* <TimerStoreProvider> */}
+    {/* <TodoStoreProvider> */}
+    <App />
+    {/* </TodoStoreProvider> */}
+    {/* </TimerStoreProvider> */}
   </React.StrictMode>
   ,
   document.getElementById('root')

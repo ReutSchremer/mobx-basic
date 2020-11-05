@@ -11,7 +11,7 @@ const Timer = observer(({ }) => {
   useEffect(() => {
     setInterval(() => {
       // every one second, increate timer by one sec
-      console.log("timer.increaseTimer()");
+      // console.log("timer.increaseTimer()");
       timerStore.increaseTimer()
     }, 1000)
 

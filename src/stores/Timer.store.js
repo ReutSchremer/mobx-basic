@@ -14,8 +14,9 @@ export class TimerStore {
     }
 
     get getMintesPassed() {
+        // console.log("calc")
         // will return minutes (seconds / 60)
-        return parseInt(this.secondsPassed / 5)
+        return parseInt(this.secondsPassed / 60)
     }
 
 
